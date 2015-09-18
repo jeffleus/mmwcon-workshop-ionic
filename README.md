@@ -1,5 +1,6 @@
 # mmwcon-workshop-ionic
 ionic source code from Friday morning MMWCON workshop.
+
 1. clone or download the project from this repo
 2. install the missing camera plugin
 3. add the platform(s) of interest (ios, android, windowsphone)
