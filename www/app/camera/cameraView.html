@@ -1,9 +1,9 @@
 <ion-view view-title="Images" ng-controller="CameraCtrl">
   <ion-content class="padding">
       <button class="button button-full button-positive" ng-click="addImageSheet()">Get Pic</button>
-<!--List of Images-->
+      <!--List of Images-->
       <ion-list>
-<!--use the ng-repeat directive to bind a list of images to the locationSvc on the scope-->
+          <!--use the ng-repeat directive to bind a list of images to the locationSvc on the scope-->
           <ion-item ng-repeat="img in imageSvc.images">
               <div style="font-weight:bold;height:48px;">Image #{{$index}}</div>
               <img ng-src="{{img.data}}">

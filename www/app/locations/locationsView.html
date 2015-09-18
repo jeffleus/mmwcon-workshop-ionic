@@ -5,9 +5,12 @@
     </ion-nav-buttons>
     <ion-content>
     <ion-list>
+        <!--note - class for this items is a special item for dividing lists or use as header-->
         <ion-item class="item-divider">Zip - City</ion-item>
+        <!--bind list items to locations list, show info, and bind to gotoLoc nav method-->
         <ion-item ng-repeat="loc in locationSvc.locations"
                   ng-click="gotoLocation(loc)">{{loc.city}} ({{loc.zip}})</ion-item>
+        <!--note - this is where our class svc pays off in readability, loc.prop -->
     </ion-list>
   </ion-content>
 </ion-view>

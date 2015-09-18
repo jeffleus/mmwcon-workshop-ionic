@@ -1,10 +1,13 @@
 <ion-view view-title="Weather">
+    <!--modify the header to include button for refresh location weather-->
     <ion-nav-buttons side="right">
       <button class="button button-icon icon ion-loop" ng-click="refreshWeather()">
       </button>
     </ion-nav-buttons>
     <ion-content>
+        <!--use the current location in the svc to title the list of values-->
         <h3>{{locationSvc.current.city}}</h3>
+        <!--note: another spot where the class svc helps readability/writing-->
         <ion-list>
             <ion-item class="item-divider"></ion-item>
             <ion-item>Weather: {{weather.description}}</ion-item>
