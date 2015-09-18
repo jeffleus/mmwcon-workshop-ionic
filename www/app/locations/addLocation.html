@@ -1,30 +1,36 @@
   <div class="modal">
+<!--modify the header to include buttons for Save/Cancel-->
     <ion-header-bar>
 		<div class="buttons">
 			<button class="button" ng-click="closeModal()">Cancel</button>
 		</div>
-		<h1 class="title balanced">Add Location</h1>
+		<h1 class="title">Add Location</h1>
 		<div class="buttons">
 			<button class="button" ng-click="addLocation()">Save</button>
 		</div>
     </ion-header-bar>
     <ion-content class="has-header padding">
-        <p>Provide a zip code to be checked against the web service.  If a city is found, you may add this
-          location to the location service.</p>
+        <p>Provide a zip code to be checked against the web service.  If a city is found, you 
+            may add this location to the location service.</p>
         <div class="list">
           <label class="item item-input">
             <span class="input-label">Zip:</span>
+        <!--HTML input element bound to the scope.search for storing zip-->
             <input type="text" ng-model="search.zip">
           </label>
-        </div>      
+        </div>
+        <!--button bound to the lookup function-->
         <button class="button button-block button-positive" ng-click="lookupZip(search.zip)">
           Lookup
         </button>
+        <!--conditional interface to display location for successful lookup-->
         <ion-list ng-hide="!newLoc">
             <ion-item><span style="font-weight:bold">Name: </span>{{newLoc.city}}</ion-item>
             <ion-item><span style="font-weight:bold">Lat: </span>{{newLoc.coord.lat}}</ion-item>
             <ion-item><span style="font-weight:bold">Lon: </span>{{newLoc.coord.lon}}</ion-item>
         </ion-list>
-        <p ng-hide="!locError" class="assertive">The zip code provided did not return a city, please try again!</p>
+        <!--conditional interface to display an error alert for failed lookups-->
+        <p ng-hide="!locError" class="assertive" style="font-weight:bold;">
+            The zip code provided did not return a city, please try again!</p>
     </ion-content>
 </div>
