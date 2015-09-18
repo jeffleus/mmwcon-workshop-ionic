@@ -1,0 +1,13 @@
+<ion-view view-title="Locations" ng-controller="LocationsCtrl">
+    <ion-nav-buttons side="right">
+      <button class="button button-icon icon ion-plus-circled" ng-click="openModal()">
+      </button>
+    </ion-nav-buttons>
+    <ion-content>
+    <ion-list>
+        <ion-item class="item-divider">Zip - City</ion-item>
+        <ion-item ng-repeat="loc in locationSvc.locations"
+                  ng-click="gotoLocation(loc)">{{loc.city}} ({{loc.zip}})</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

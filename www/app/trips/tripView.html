@@ -1,0 +1,8 @@
+<ion-view view-title="Trips" ng-controller="TripCtrl">
+  <ion-content>
+    <ion-list>
+        <ion-item class="item-divider"></ion-item>
+        <ion-item ng-repeat="t in tripSvc.trips">{{t.title}}</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

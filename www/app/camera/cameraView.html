@@ -1,0 +1,11 @@
+<ion-view view-title="Images" ng-controller="CameraCtrl">
+  <ion-content class="padding">
+      <button class="button button-full button-positive" ng-click="addImageSheet()">Get Pic</button>
+      <ion-list>
+          <ion-item ng-repeat="img in imageSvc.images">
+              <div style="font-weight:bold;">Image #{{$index}}</div>
+              <img ng-src="{{img.data}}">
+          </ion-item>
+      </ion-list>
+  </ion-content>
+</ion-view>

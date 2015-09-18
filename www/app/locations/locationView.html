@@ -1,0 +1,18 @@
+<ion-view view-title="Weather">
+    <ion-nav-buttons side="right">
+      <button class="button button-icon icon ion-loop" ng-click="refreshWeather()">
+      </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <h3>{{locationSvc.current.city}}</h3>
+        <ion-list>
+            <ion-item class="item-divider"></ion-item>
+            <ion-item>Weather: {{weather.description}}</ion-item>
+            <ion-item>Description: {{weather.main}}</ion-item>
+            <ion-item class="item-divider"></ion-item>
+            <ion-item>Temp: {{weather.temp}}</ion-item>
+            <ion-item>Press: {{weather.pressure}}</ion-item>
+            <ion-item>Humid: {{weather.humidity}}</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
